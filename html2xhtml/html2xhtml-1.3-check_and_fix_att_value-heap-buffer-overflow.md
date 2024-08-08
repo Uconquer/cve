@@ -15,11 +15,11 @@ make
 ./src/html2xhtml ./poc.html
 ```
 
-![image-20240808093534467](C:\Users\zlovezs\AppData\Roaming\Typora\typora-user-images\image-20240808093534467.png)
+![image-20240808100558572](html2xhtml-1.3-check_and_fix_att_value-heap-buffer-overflow.assets/image-20240808100558572.png)
 
 Reproduces the crash file：
 
-[poc.zip](..\..\..\Users\zlovezs\Desktop\poc.zip) 
+ [poc.zip](html2xhtml-1.3-check_and_fix_att_value-heap-buffer-overflow.assets\poc.zip) 
 
 
 
@@ -27,5 +27,5 @@ Reproduces the crash file：
 
 In html2xhtml-1.3, check_and_fix_att_value function has heap overflow vulnerability. fixed variable subscript can exceed the parameter size of tree_malloc function. When k=358, heap overflow will occur when fixed is assigned.
 
-![image-20240808092608678](C:\Users\zlovezs\AppData\Roaming\Typora\typora-user-images\image-20240808092608678.png)
+![image-20240808100753581](html2xhtml-1.3-check_and_fix_att_value-heap-buffer-overflow.assets/image-20240808100753581.png)
 
